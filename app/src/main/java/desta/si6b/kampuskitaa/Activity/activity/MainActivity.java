@@ -1,5 +1,6 @@
 package desta.si6b.kampuskitaa.Activity.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
 
         lmKampus = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvKampus.setLayoutManager(lmKampus);
+
+        fabTambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TambahActivity.class));
+            }
+        });
     }
 
     @Override
